@@ -51,12 +51,14 @@ cd my-portfolio
 ```
 3.Open index.html in your browser or host it via GitHub Pages / Netlify.
 
-🔗 Connect with Me
-💼 LinkedIn
+👨‍💻 Author
+Sudhanshu Yadav
 
-📧 Email: py7716496@gmail.com
+🔗 GitHub(https://heysudhuu.github.io/my-portfolio/)
 
-🧑‍💻 GitHub: @heysudhuu
+💼 LinkedIn([](https://www.linkedin.com/in/heysudhu))
+
+📧 py7716496@gmail.com
 
 📃 License
 This project is open-source and available under the MIT License.
