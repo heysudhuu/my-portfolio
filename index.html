@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudhanshu Yadav – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    :focus-visible { outline: 2px solid #a786fd; outline-offset: 2px; }
+    .tab-content[style*="display: none"] {
+  opacity: 0 !important;
+  transform: translateY(40px);
+  pointer-events: none;
+  position: absolute;
+}
+  </style>
+</head>
+<body>
+  <!-- Animated SVG Blob Background -->
+  <div class="animated-blob-bg" aria-hidden="true">
+    <svg viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="bg-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#a786fd"/>
+          <stop offset="100%" stop-color="#6c63ff"/>
+        </linearGradient>
+      </defs>
+      <path id="blob" fill="url(#bg-gradient)">
+        <animate attributeName="d" dur="12s" repeatCount="indefinite"
+          values="
+            M421,320Q414,390,350,420Q286,450,220,420Q154,390,150,320Q146,250,220,220Q294,190,350,220Q406,250,421,320Z;
+            M421,320Q414,390,350,420Q286,450,220,420Q154,390,180,320Q206,250,280,220Q354,190,400,220Q446,250,421,320Z;
+            M421,320Q414,390,350,420Q286,450,220,420Q154,390,150,320Q146,250,220,220Q294,190,350,220Q406,250,421,320Z
+          "/>
+      </path>
+    </svg>
+  </div>
+
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo" tabindex="0">Sudhu</div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="btn-outline" aria-pressed="false" aria-label="Toggle dark mode">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="content">
+        <img src="Avatar/ChatGPT Image Jun 18, 2025, 04_20_26 PM.png" alt="Sudhanshu Yadav Avatar" class="avatar">
+        <h1 class="fade-in">Hi, I'm <span>Sudhanshu Yadav</span></h1>
+        <p class="fade-in delay-1">
+          <span id="typewriter"></span>
+        </p>
+        <div class="buttons fade-in delay-2">
+          <a href="#contact" class="btn">Hire Me</a>
+          <a href="Sudhanshu_Yadav_CV.pdf" download class="btn-outline">Download CV</a>
+        </div>
+        <div class="social fade-in delay-3">
+          <a href="https://github.com/heysudhuu" aria-label="GitHub"><img src="icons8-github.png" alt="GitHub logo" /></a>
+          <a href="https://www.linkedin.com/in/heysudhu/" aria-label="LinkedIn"><img src="icons8-linkedin-50.png" alt="LinkedIn logo" /></a>
+          <a href="https://www.instagram.com/hey.sudhu?utm_source=qr&igsh=MWgxZGs3OHlwYTdyOA%3D%3D" aria-label="Instagram"><img src="icons8-instagram-logo-50.png" alt="Instagram logo" /></a>
+        </div>
+        <div class="social-badges fade-in delay-3">
+          <a href="https://github.com/heysudhuu" target="_blank" rel="noopener" aria-label="GitHub">
+            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
+          </a>
+          <a href="https://www.linkedin.com/in/heysudhu/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+          </a>
+          <a href="https://www.instagram.com/hey.sudhu" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge"/>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="scroll-down-indicator" aria-hidden="true">
+      <span></span>
+    </div>
+    <section class="about" id="about">
+      <img src="Avatar/ChatGPT Image Jun 18, 2025, 04_20_26 PM.png" alt="Sudhanshu Yadav Avatar" class="avatar about-avatar">
+      <h2>About Me</h2>
+      <p>
+        Transforming ideas into digital experiences.<br>
+        Hello, I'm Sudhanshu Yadav, a cybersecurity enthusiast and full stack developer. I love building secure, scalable, and user-friendly digital solutions.
+      </p>
+      <div class="about-cards">
+        <div class="card">
+          <h3>4</h3>
+          <p>Total Projects</p>
+        </div>
+        <div class="card">
+          <h3>11</h3>
+          <p>Certificates</p>
+        </div>
+        <div class="card">
+          <h3>0</h3>
+          <p>Years of Experience</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2>Portfolio Showcase</h2>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="projects" role="tab" aria-selected="true">Projects</button>
+        <button class="tab" data-tab="certificates" role="tab" aria-selected="false">Certificates</button>
+        <button class="tab" data-tab="techstack" role="tab" aria-selected="false">Tech Stack</button>
+      </div>
+      <div class="tab-content" id="projects" role="tabpanel">
+        <div class="project-card">
+          <img src="Project/msedge_ZslC602oJb.png" alt="RFID Library Checkout And CheckIN"/>
+          <h3>RFID Library Checkout And CheckIN</h3>
+          <p>A smart RFID-Based Library Checkout System using Arduino, ASP.NET Core Web API, and SQL Server with student & admin dashboards.</p>
+          <a href="https://github.com/heysudhuu/TagMyBook-RFID-Library-System.git">GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="Project/ApplicationFrameHost_nPhx2nznds.png" alt="Screenshot of Hand Gesture Controlled Virtual Keyboards project"/>
+          <h3>Hand Gesture Controlled Virtual Keyboards</h3>
+          <p>Control a virtual keyboard using hand gestures detected via computer vision and machine learning. Built with Python, OpenCV, and MediaPipe.</p>
+          <a href="https://github.com/heysudhuu/Hand-Gesture-Controlled-Virtual-Keyboards" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="Project/msedge_g2FI4n39wk.png" alt="Library Management System Searching Screenshot"/>
+          <h3>Library Management System - Searching</h3>
+          <p>
+            The Library Management System is designed to simplify the process of managing a library's inventory and user interactions. This system enables librarians and users to efficiently manage book collections, track borrowed books, and maintain user records.
+          </p>
+          <a href="https://github.com/heysudhuu/library-Management-System-Searching.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="Project/ApplicationFrameHost_5FbdMISIXH.png" alt="My Neon Pose Tracker"/>
+          <h3>My Neon Pose Tracker</h3>
+          <p>My Neon Pose Tracker is an interactive application that utilizes computer vision and machine learning to track human poses and hand landmarks in real-time. Built with PyQt5 for the GUI, OpenCV for video capture, and MediaPipe for pose detection, this application allows users to visualize their movements in a 3D space while providing functionalities such as video recording, GIF exporting, and background music playback.</p>
+          <a href="https://github.com/heysudhuu/neon-pose-tracker.git">GitHub</a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+      <div class="tab-content" id="certificates" style="display:none;" role="tabpanel">
+        <div class="certificate-card">
+          <img src="certificate/msedge_46cFRXxbvW.png" alt="AI for Entrepreneurship certificate"/>
+          <p>AI for Entrepreneurship</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_49PwAIFmDx.png" alt="Cybersecurity Fundamentals certificate"/>
+          <p>Project Development</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_5RXInw9BRf.png" alt="Python for Everybody certificate"/>
+          <p>Full-Stack Web Developer</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_6SWlhQWq36.png" alt="React Developer certificate"/>
+          <p>Azure cognitive Service</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_G4BHNWNrsg.png" alt="Ethical Hacking Masterclass certificate"/>
+          <p>Ethical Hacking Masterclass</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_hEXKDgslQl.png" alt="AWS Cloud Practitioner certificate"/>
+          <p>5G Network Fundamentals</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_iWg5aOkX63.png" alt="Full Stack Web Development certificate"/>
+          <p>Databases and SQL For Data Science With Python</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_J00DDE23KP.png" alt="Blockchain A-Z certificate"/>
+          <p>Blockchain A-Z</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_OwXIFh1hfq.png" alt="Linux Essentials certificate"/>
+          <p>DevOps Foundations</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_T6PeNZ3Ukp.png" alt="Machine Learning certificate"/>
+          <p>Kali Linux</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_uOiEU3hdO0.png" alt="JavaScript Algorithms certificate"/>
+          <p>Introduction of Database</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_Z1CB3kkRBj.png" alt="Google IT Support certificate"/>
+          <p>Project Exhibition (Future Tech - 2024)</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/msedge_ztIsGNksu2.png" alt="The Ethereum Blockchain certificate"/>
+          <p>The Ethereum Blockchain</p>
+        </div>
+        <div class="certificate-card">
+          <img src="certificate/nW8ofHpUom.png" alt="Data Science certificate"/>
+          <p>The Arduino Platform and C programming</p>
+        </div>
+        <!-- Add more certificate cards as needed -->
+      </div>
+      <div class="tab-content" id="techstack" style="display:none;" role="tabpanel">
+        <div class="tech-icons">
+          <img src="icons8-html-48.png" alt="HTML5"/>
+          <img src="icons8-css-48.png" alt="CSS3"/>
+          <img src="icons8-javascript-48.png" alt="JavaScript"/>
+          <img src="icons8-nodejs-48.png" alt="Node.js"/>
+          <img src="icons8-bootstrap-48.png" alt="Bootstrap"/>
+          <img src="icons8-react-40.png" alt="React"/>
+            <img src="icons8-python-48.png" alt="Python"/>
+            <img src="icons8-sql-48.png" alt="SQL"/>
+
+          <!-- Add more tech icons as needed -->
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-container">
+        <form class="contact-form" autocomplete="off">
+          <input type="text" placeholder="Your Name" required aria-label="Your Name"/>
+          <input type="email" placeholder="Your Email" required aria-label="Your Email"/>
+          <textarea placeholder="Your Message" required aria-label="Your Message"></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="connect">
+          <h3>Connect With Me</h3>
+          <a href="https://github.com/heysudhuu" aria-label="GitHub"><img src="icons8-github.png" alt="GitHub logo" /></a>
+          <a href="https://www.linkedin.com/in/heysudhu/" aria-label="LinkedIn"><img src="icons8-linkedin-50.png" alt="LinkedIn logo" /></a>
+          <a href="https://www.instagram.com/hey.sudhu?utm_source=qr&igsh=MWgxZGs3OHlwYTdyOA%3D%3D" aria-label="Instagram"><img src="icons8-instagram-logo-50.png" alt="Instagram logo" /></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sudhanshu Yadav. All rights reserved.</p>
+  </footer>
+
+  <div class="scroll-down-indicator" aria-hidden="true">
+    <span></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
