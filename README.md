@@ -54,9 +54,9 @@ cd my-portfolio
 👨‍💻 Author
 Sudhanshu Yadav
 
-🔗 GitHub[](https://github.com/heysudhuu)
+🔗 GitHub[GitHub](https://github.com/heysudhuu)
 
-💼 LinkedIn[](https://www.linkedin.com/in/heysudhu)
+💼 LinkedIn[Linkedln](https://www.linkedin.com/in/heysudhu)
 
 📧 py7716496@gmail.com
 
