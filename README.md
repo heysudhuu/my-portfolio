@@ -33,7 +33,7 @@ This website serves as my digital resume and project showcase. Built using moder
 
 ## 🖼️ Screenshot
 
-![Portfolio Preview](preview.png)
+![Portfolio Preview](MxjXb1hsFM.png)
 
 ---
 
